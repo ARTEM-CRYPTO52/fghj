@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя первая HTML-страница</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            gap: 30px;
+        }
+        
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background-color: #4b6cb7;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+        }
+        
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e74c3c;
+        }
+        
+        .example-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #4b6cb7;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #4b6cb7;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #3a5795;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Добро пожаловать в мир HTML!</h1>
+            <p class="subtitle">Это демонстрационная страница, созданная с использованием HTML и CSS. Здесь показаны основные возможности разметки веб-страниц.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <main class="main-content">
+                <h2>Что такое HTML?</h2>
+                <p><strong>HTML (HyperText Markup Language)</strong> — это язык разметки, используемый для создания структуры веб-страниц. HTML описывает структуру содержимого с помощью различных элементов, которые браузер отображает как заголовки, параграфы, списки, изображения и другие компоненты.</p>
+                
+                <div class="example-box">
+                    <h3>Пример HTML-кода:</h3>
+                    <p>Простая структура HTML-документа:</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Заголовок страницы&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Мой первый заголовок&lt;/h1&gt;
+    &lt;p&gt;Мой первый параграф.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                
+                <h2>Основные элементы HTML</h2>
+                <ul class="feature-list">
+                    <li><span class="icon">1</span> <strong>Заголовки</strong> - определяются тегами от &lt;h1&gt; до &lt;h6&gt;</li>
+                    <li><span class="icon">2</span> <strong>Параграфы</strong> - создаются с помощью тега &lt;p&gt;</li>
+                    <li><span class="icon">3</span> <strong>Ссылки</strong> - создаются с помощью тега &lt;a&gt;</li>
+                    <li><span class="icon">4</span> <strong>Изображения</strong> - вставляются с помощью тега &lt;img&gt;</li>
+                    <li><span class="icon">5</span> <strong>Списки</strong> - бывают нумерованные (&lt;ol&gt;) и ненумерованные (&lt;ul&gt;)</li>
+                    <li><span class="icon">6</span> <strong>Таблицы</strong> - создаются с помощью тегов &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</li>
+                </ul>
+                
+                <p>HTML-страница состоит из набора элементов, которые образуют дерево документа (DOM). Каждый элемент может иметь атрибуты, которые предоставляют дополнительную информацию об элементе.</p>
+                
+                <a href="https://developer.mozilla.org/ru/docs/Web/HTML" class="button" target="_blank">Узнать больше об HTML</a>
+            </main>
+            
+            <aside class="sidebar">
+                <h2>Полезные ресурсы</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank">Документация MDN по HTML</a></li>
+                    <li><a href="https://html5book.ru/" target="_blank">HTML5 Book</a></li>
+                    <li><a href="https://webref.ru/html" target="_blank">WebReference по HTML</a></li>
+                    <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
+                </ul>
+                
+                <h2>Советы по HTML</h2>
+                <ol>
+                    <li>Всегда используйте правильную структуру документа</li>
+                    <li>Проверяйте валидность своего HTML-кода</li>
+                    <li>Используйте семантические теги для улучшения доступности</li>
+                    <li>Тестируйте на разных устройствах и браузерах</li>
+                    <li>Следуйте современным стандартам HTML5</li>
+                </ol>
+                
+                <h2>Семантические элементы HTML5</h2>
+                <p>Современный HTML включает семантические элементы, которые лучше описывают содержимое:</p>
+                <ul>
+                    <li><code>&lt;header&gt;</code> - верхний колонтитул</li>
+                    <li><code>&lt;nav&gt;</code> - навигация</li>
+                    <li><code>&lt;main&gt;</code> - основное содержимое</li>
+                    <li><code>&lt;section&gt;</code> - раздел документа</li>
+                    <li><code>&lt;article&gt;</code> - независимая часть контента</li>
+                    <li><code>&lt;footer&gt;</code> - нижний колонтитул</li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Демонстрационная HTML-страница. Создано для изучения основ веб-разработки.</p>
+            <p>Эта страница является примером использования HTML и CSS для создания веб-страниц.</p>
+        </div>
+    </footer>
+</body>
+</html>
